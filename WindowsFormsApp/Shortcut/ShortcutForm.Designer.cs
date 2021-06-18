@@ -38,9 +38,9 @@ namespace Shortcut
             // processNameLabel
             // 
             this.processNameLabel.AutoSize = true;
-            this.processNameLabel.Location = new System.Drawing.Point(12, 9);
+            this.processNameLabel.Location = new System.Drawing.Point(14, 15);
             this.processNameLabel.Name = "processNameLabel";
-            this.processNameLabel.Size = new System.Drawing.Size(90, 12);
+            this.processNameLabel.Size = new System.Drawing.Size(107, 20);
             this.processNameLabel.TabIndex = 0;
             this.processNameLabel.Text = "Process Name";
             // 
@@ -53,12 +53,14 @@ namespace Shortcut
             // 
             // ShortcutForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.processNameLabel);
+            this.Font = new System.Drawing.Font("KoPubWorld돋움체 Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "ShortcutForm";
-            this.Text = "Shortcut View";
+            this.Text = "Shortcut Settings";
             this.Load += new System.EventHandler(this.ShortcutForm_Load);
             this.Resize += new System.EventHandler(this.ShortcutForm_Resize);
             this.ResumeLayout(false);

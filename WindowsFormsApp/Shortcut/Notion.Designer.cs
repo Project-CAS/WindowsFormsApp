@@ -1,7 +1,7 @@
 ﻿
 namespace Shortcut
 {
-    partial class Notion
+    partial class NotionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,10 @@ namespace Shortcut
             this.shortcutDataSet = new Shortcut.shortcutDataSet();
             this.notionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notionTableAdapter = new Shortcut.shortcutDataSetTableAdapters.notionTableAdapter();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.shortcutDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // shortcutDataSet
@@ -51,16 +53,30 @@ namespace Shortcut
             // 
             this.notionTableAdapter.ClearBeforeFill = true;
             // 
-            // Notion
+            // dataGridView
+            // 
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.DataSource = this.notionBindingSource;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 23;
+            this.dataGridView.Size = new System.Drawing.Size(784, 361);
+            this.dataGridView.TabIndex = 0;
+            // 
+            // NotionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Name = "Notion";
+            this.Controls.Add(this.dataGridView);
+            this.Name = "NotionForm";
             this.Text = "notion";
-            this.Load += new System.EventHandler(this.Notion_Load);
+            this.Load += new System.EventHandler(this.NotionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.shortcutDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +85,6 @@ namespace Shortcut
         private shortcutDataSet shortcutDataSet;
         private System.Windows.Forms.BindingSource notionBindingSource;
         private shortcutDataSetTableAdapters.notionTableAdapter notionTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
