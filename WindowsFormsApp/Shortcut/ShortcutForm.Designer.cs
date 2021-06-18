@@ -30,6 +30,7 @@ namespace Shortcut
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShortcutForm));
             this.processNameLabel = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
@@ -45,6 +46,7 @@ namespace Shortcut
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Shortcut";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
@@ -58,7 +60,6 @@ namespace Shortcut
             this.Name = "ShortcutForm";
             this.Text = "Shortcut View";
             this.Load += new System.EventHandler(this.ShortcutForm_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ShortcutForm_KeyPress);
             this.Resize += new System.EventHandler(this.ShortcutForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();

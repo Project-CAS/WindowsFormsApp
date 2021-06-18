@@ -19,7 +19,6 @@ namespace Shortcut
 
         private void Notion_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
