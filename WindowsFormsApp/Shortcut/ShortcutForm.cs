@@ -22,13 +22,12 @@ namespace Shortcut
 
 
         Focus focus;
-        //Hotkey hotkey;
 
         public ShortcutForm()
         {
             InitializeComponent();
             focus = new Focus();
-            //hotkey = new Hotkey();
+            this.Load += ShortcutForm_Load;
         }
 
         private void ShortcutForm_Load(object sender, EventArgs e)
@@ -37,12 +36,12 @@ namespace Shortcut
             RegisterHotKey((int)this.Handle, 0, 0x0, (int)Keys.F1);
         }
 
-        private void ProcessCheck(string processName)
+        private void ProcessCheck()
         {
-            processNameLabel.Text = "ProcessCheck";
+            string processName = focus.getFocusProcessName();
             if (processName == "Notion")
             { 
-                Form form = new Notion();
+                Form form = new NotionForm();
                 form.ShowDialog();
             }
         }
@@ -70,7 +69,7 @@ namespace Shortcut
             {
                 if (m.WParam == (IntPtr)0x0)
                 {
-                    MessageBox.Show("Press");
+                    ProcessCheck();
                 }
             }
         }
